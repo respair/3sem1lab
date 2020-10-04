@@ -29,6 +29,7 @@ void getTime(Sequence<int>* (*s)(Sequence<T>* seqq, int (*cmp)(T a, T b)),
 		testUser<int>(ss, seq4);
 		auto end2 = std::chrono::steady_clock::now();
 		auto elapsed_ms_2 = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+		cout << endl;
 		cout << "operating time of the first function: " << elapsed_ms.count() << " ms, " << "second function: " <<
 			elapsed_ms_2.count() << " ms." << endl;
 	}
@@ -45,6 +46,7 @@ void getTime(Sequence<int>* (*s)(Sequence<T>* seqq, int (*cmp)(T a, T b)),
 		testUser<int>(ss, seq4);
 		auto end2 = std::chrono::steady_clock::now();
 		auto elapsed_ms_2 = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+		cout << endl;
 		cout << "operating time of the first function: " << elapsed_ms.count() << " ms, " << "second function: " <<
 			elapsed_ms_2.count() << " ms." << endl;
 	}
