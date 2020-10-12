@@ -13,6 +13,11 @@ void getTime(Sequence<int>* (*s)(Sequence<T>* seqq, int (*cmp)(T a, T b)),
 	cin >> answer;
 	cout << "enter the size of the sequence:" << endl;
 	cin >> size_of_;
+	if (size_of_ <= 0) {
+		cout << "error!" << endl;
+		exit(1);
+	}
+	if (size_of_ <= 0) exit(1);
 	int* array = new int[size_of_];
 	for (int i = 0; i < size_of_; i++)
 		array[i] = rand() % 1000;
@@ -24,7 +29,8 @@ void getTime(Sequence<int>* (*s)(Sequence<T>* seqq, int (*cmp)(T a, T b)),
 		testUser<int>(s, seq3);
 		auto end = std::chrono::steady_clock::now();
 		auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-
+		cout << endl;
+		cout << endl;
 		auto begin2 = std::chrono::steady_clock::now();
 		testUser<int>(ss, seq4);
 		auto end2 = std::chrono::steady_clock::now();
@@ -41,6 +47,7 @@ void getTime(Sequence<int>* (*s)(Sequence<T>* seqq, int (*cmp)(T a, T b)),
 		testUser<int>(s, seq3);
 		auto end = std::chrono::steady_clock::now();
 		auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+		cout << endl;
 		cout << endl;
 		auto begin2 = std::chrono::steady_clock::now();
 		testUser<int>(ss, seq4);
