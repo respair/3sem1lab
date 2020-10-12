@@ -162,5 +162,8 @@ template <class T>
 void testUser(Sequence<int>* (*s)(Sequence<T>* seqq, int (*cmp)(T a, T b)), Sequence <T>* seq) {
     Sequence<int>* seq2 = s(seq, cmp);
     for (int i = 0; i < seq2->GetSize(); i++)
-        cout << seq2->Get(i)<<" ";
+    {
+        if (i % 25 == 0) cout << endl;
+        cout << seq2->Get(i) << " ";
+    }
 }
